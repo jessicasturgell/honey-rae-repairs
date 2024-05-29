@@ -19,7 +19,10 @@ export const CustomerViews = ({ currentUser }) => {
         <Route index element={<Welcome />} />
         <Route path="tickets">
           <Route index element={<TicketList currentUser={currentUser} />} />
-          <Route path="create" element={<TicketForm />}></Route>
+          <Route
+            path="create"
+            element={<TicketForm currentUser={currentUser} />}
+          />
         </Route>
       </Route>
     </Routes>
